@@ -2,79 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example To-Do App</title>
+  <title>Interstellar</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
     }
 
-    h1 {
-      color: #333;
-    }
-
-    details {
+    header, nav, section, aside, footer {
+      background-color: #2c2c2c;
       margin-bottom: 20px;
-      background: #fff;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 15px;
+      border-radius: 10px;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    header h1 {
+      margin: 0;
+      color: #ffd700;
     }
 
-    li {
-      background: #d9f0ff;
+    nav a {
+      margin-right: 15px;
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section h2 {
+      color: #ffcc00;
+    }
+
+    aside p {
       margin: 5px 0;
-      padding: 8px;
-      border-radius: 4px;
     }
 
-    input[type="text"] {
-      padding: 5px;
-      width: 200px;
-    }
-
-    button {
-      padding: 5px 10px;
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: #ccc;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <h1>To-Do List</h1>
+  <header>
+    <h1>Interstellar</h1>
+  </header>
 
-  <details>
-    <summary>This is a brief summary of the To-Do App</summary>
-    <p>This app helps users manage tasks efficiently and keep track of daily goals.</p>
-  </details>
+  <nav>
+    <a id="nav-actor" href="#actor">Actors</a>
+    <a id="nav-quote" href="#quote">Quotes</a>
+  </nav>
 
-  <div>
-    <input type="text" id="new-task" placeholder="Add new task" />
-    <button onclick="addTask()">Add</button>
-  </div>
+  <section>
+    <h2>Summary</h2>
+    <p>
+      "Interstellar" is a science fiction epic where Earth is facing environmental collapse. A team of astronauts, led by Cooper, travels through a wormhole near Saturn in search of a new habitable planet for humanity. The film explores themes of time dilation, love, and survival across space and time.
+    </p>
+  </section>
 
-  <ul id="task-list">
-    <li>Buy groceries</li>
-    <li>Read a book</li>
-  </ul>
+  <section id="actor">
+    <h2>Actors</h2>
+    <p>
+      The film stars Matthew McConaughey as Joseph Cooper, Anne Hathaway as Dr. Amelia Brand, Jessica Chastain as Murphy Cooper, and Michael Caine as Professor Brand. Each actor delivers a compelling performance that adds emotional depth to the scientific narrative.
+    </p>
+  </section>
 
-  <script>
-    function addTask() {
-      const input = document.getElementById('new-task');
-      const taskText = input.value.trim();
-      if (taskText) {
-        const li = document.createElement('li');
-        li.textContent = taskText;
-        document.getElementById('task-list').appendChild(li);
-        input.value = '';
-      }
-    }
-  </script>
+  <section id="quote">
+    <h2>Favorite Quote</h2>
+    <p>
+      "Love is the one thing that transcends time and space." – Dr. Amelia Brand
+    </p>
+  </section>
+
+  <aside>
+    <p><strong>IMDb Rating:</strong> 8.6/10</p>
+    <p><strong>Release Date:</strong> November 7, 2014</p>
+  </aside>
+
+  <footer>
+    Produced by: Christopher Nolan
+  </footer>
 
 </body>
 </html>
