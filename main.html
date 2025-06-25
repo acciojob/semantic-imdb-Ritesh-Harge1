@@ -2,68 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example To-Do App</title>
+  <title>The Dark Knight</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f9f9f9;
-    }
-    h1 {
+      background-color: #f4f4f4;
       color: #333;
+      margin: 0;
+      padding: 20px;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    header, nav, section, aside, footer {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    li {
-      background: #e0f7fa;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 5px;
+
+    header h1 {
+      margin: 0;
+      color: #222;
     }
-    input[type="text"] {
-      padding: 5px;
-      width: 200px;
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
     }
-    button {
-      padding: 5px 10px;
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section h2 {
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      font-weight: bold;
+      background-color: #222;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <h1>To-Do List</h1>
+  <header>
+    <h1>The Dark Knight</h1>
+  </header>
 
-  <details>
-    <summary>Summary of To-Do App</summary>
-    <p>This app allows users to add and manage daily tasks efficiently.</p>
-  </details>
+  <nav>
+    <a id="nav-actor" href="#actor">Actors</a>
+    <a id="nav-quote" href="#quote">Quotes</a>
+  </nav>
 
-  <div>
-    <input type="text" id="new-task" placeholder="Add new task" />
-    <button onclick="addTask()">Add</button>
-  </div>
+  <section>
+    <h2>Summary</h2>
+    <p>
+      "The Dark Knight" is a gripping superhero thriller that follows Batman as he confronts the Joker, a criminal mastermind spreading chaos in Gotham City. As the Joker pushes the city into anarchy, Batman must balance his heroic duty with personal sacrifices, testing the limits of his morality and justice.
+    </p>
+  </section>
 
-  <ul id="task-list">
-    <li>Buy groceries</li>
-    <li>Study for exam</li>
-    <li>Call mom</li>
-  </ul>
+  <section id="actor">
+    <h2>Actors</h2>
+    <p>
+      Christian Bale stars as Bruce Wayne / Batman, supported by an outstanding cast including Heath Ledger as the Joker, Aaron Eckhart as Harvey Dent, Gary Oldman as Commissioner Gordon, and Michael Caine as Alfred Pennyworth.
+    </p>
+  </section>
 
-  <script>
-    function addTask() {
-      const input = document.getElementById('new-task');
-      const taskText = input.value.trim();
-      if (taskText) {
-        const li = document.createElement('li');
-        li.textContent = taskText;
-        document.getElementById('task-list').appendChild(li);
-        input.value = '';
-      }
-    }
-  </script>
+  <section id="quote">
+    <h2>Favorite Quote</h2>
+    <p>
+      "You either die a hero, or you live long enough to see yourself become the villain." – Harvey Dent
+    </p>
+  </section>
+
+  <aside>
+    <p><strong>IMDb Rating:</strong> 9.0/10</p>
+    <p><strong>Release Date:</strong> July 18, 2008</p>
+  </aside>
+
+  <footer>
+    Produced by: Christopher Nolan
+  </footer>
 
 </body>
 </html>
-
